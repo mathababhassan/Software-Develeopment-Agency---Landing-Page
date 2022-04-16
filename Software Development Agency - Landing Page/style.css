@@ -114,7 +114,8 @@ h1 a{
     color: azure;
     font-family: 'Lobster', cursive;
     font-weight: 700;
-
+    text-decoration: none;
+    z-index: 1;
     position: relative;
 
     transition: opacity;
