@@ -1,0 +1,727 @@
+/* Box Model Hack */
+*{
+    box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+   clear: both;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.6em;
+    font-weight: 400;
+    letter-spacing: .05rem;
+}
+
+
+/* 
+--box model styles 
+width, height, float, backround, display 
+-- flexbox and grid
+-- padding and margins
+-- typography
+-- others: animation and transitions
+-- positioning
+
+ */
+
+/* Styling the header first */
+.primary-header{
+    height: 100vh;
+    color: azure;
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+.header-logo{
+    color: azure;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    box-shadow: 0 -5px 0px #7DF9FF inset;
+
+    position: absolute;
+    top: 88%;
+    left: 2%;
+    opacity: 0;
+    animation: entrance-logo;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 2.3s;
+
+    transition: transform;
+    transition-duration: .1s;
+    transition-timing-function: ease;
+
+}
+
+@keyframes entrance-logo {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.header-logo:hover{
+    color: #09253d;
+    background-color: #7DF9FF;
+}
+h1{
+    text-align: center;
+    position: relative;
+    animation: entrance-heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+
+    font-size: 4.5rem;
+}
+
+@keyframes entrance-heading {
+    0%{
+        top: -250px;
+    }
+    100%{
+        top: 250px
+    }
+}
+
+
+h1 a{
+    color: azure;
+    font-family: 'Lobster', cursive;
+    font-weight: 700;
+    text-decoration: underline #7DF9FF;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    transition: opacity;
+    transition-duration: 0.3s;
+    box-shadow: 0 -5px 0px #7DF9FF inset;
+}
+
+
+
+h1 a:hover{
+    background-color: #7DF9FF;
+    color: #09253d;
+}
+.video-bg{
+    min-width: 100%;
+    min-height: 100%; 
+    position: absolute;
+    z-index: -1;
+    top: -100px;
+    left: -200px;
+}
+
+.header-form{
+    text-align: center;
+
+    position: relative;
+    animation-name: entrance-form;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes entrance-form {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+form :is(input[type="text"], input[type="submit"]){
+    height: 50px;
+    background: transparent;
+
+    padding: 10px 5px;
+    margin-top: 21%;
+    margin-bottom: 6%;
+    border: 2px #7DF9FF solid;
+    border-radius: 10px;
+
+    color: azure;
+
+}
+
+form input[type="text"]{
+    width: 40%;
+
+    font-size: 1.6rem;
+
+    transition: transform;
+    transition-duration: .1s;
+}
+form input[type="text"]:hover{
+    opacity: 1;
+    transform: scale(1.01);
+}
+form input::placeholder{
+    color: azure;
+    font-size: 1.6rem;
+    padding-left: 1.7rem;
+}
+
+form input[type="submit"]{
+    width: 10%;
+    background-color: #fff;
+    border: 2px #fff solid;
+
+    margin-left: 20px;
+
+    
+    color: #09253d;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    transition: transform;
+    transition-duration: .1s;
+}
+
+form input[type="submit"]:hover{
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+/* 
+--box model styles 
+width, height, float, backround, display 
+-- flexbox and grid
+-- padding and margins and borders
+-- typography
+-- others: animation and transitions
+-- positioning
+
+ */
+
+/* Styling the Who Are We? Section */
+.who-are-we{
+    margin-top: 82px;
+    margin-bottom: 32px;
+}
+
+.who-are-we-container{
+    width: 30%;
+
+    margin-inline: auto;
+
+}
+/* Giving all the h2's an initail general syling */
+h2{
+    width: fit-content;
+    /* typography */
+    color: #09253d;
+    font-size: 4rem;
+    box-shadow: 0 -5px 0px #7DF9FF inset;
+}
+
+/* Giving specific styles to this section h2 */
+.who-are-we h2{
+    margin-bottom: 30px;
+    margin-left: 530px;
+}
+
+.who-are-we p{
+
+    margin-block: 0;
+
+    color: #333;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+
+
+
+/* 
+--box model styles 
+width, height, float, backround, display 
+-- flexbox and grid
+-- padding and margins and borders
+-- typography
+-- others: animation and transitions
+-- positioning
+
+ */
+
+/* Styling Services Section */
+.services{
+    margin-top: 150px;
+    margin-bottom: 32px;
+}
+
+/* Styling the Services Header */
+.services h2{
+
+    margin-bottom: 95px;
+    margin-inline: auto;
+    
+    text-align: center;
+}
+.services-container{
+    padding: 0 50px 50px 50px;
+}
+
+/* Display Flex On Services Section */
+.services :is(.row-1, .row-2){
+    display: flex;
+    gap: 35px;
+}
+.services :is(.row-1 .item, .row-2 .item){
+    flex: 1;
+    border: 2px solid #333;
+
+    transition: transform;
+    transition-duration: .1s;
+    transition-timing-function: ease-out;
+}
+
+/* Adding a transition to the items border when hovered */
+.services :is(.row-1 .item, .row-2 .item):hover{
+    border: 2px solid #7DF9FF;
+
+    transform: scale(1.01);
+}
+
+/* Adjusting the rows */
+.services .row-1{
+    margin-block-end: 30px;
+}
+.services .row-2{
+    margin-block-start: 30px;
+}
+/* Adjusting the Services Items */
+.services img{
+    width: 40px;
+    height: 40px;
+    display: block;
+
+    margin-inline: auto;
+    margin-block-start: 20px;
+    padding: 0;
+}
+.services .item h3{
+    width: fit-content;
+    
+    margin-inline: auto;
+    margin-block-start: 2rem;
+    margin-block-end: 1.6rem;
+
+    color: #09253d;
+    font-size: 2.2rem;
+    text-align: center;
+
+    transition: transform;
+    transition-duration: .1s;
+    transition-timing-function: ease-out;
+}
+
+.services .item p{
+    width: 70%;
+
+    margin-inline: auto;
+    margin-top: 20px;
+
+    color: #333;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+/* Adding a transition to the h3 when hovered */
+.services .item h3:hover{
+    box-shadow: 0 -5px 0px #7DF9FF inset;
+}
+
+
+.services .item{
+    height: 250px;
+    width: 50%;
+    background-color: white;
+
+    border: 2px solid #09253d; 
+    border-radius: 10px;
+    margin: 10px;
+
+}
+
+/* Styling Recent Work Section */
+
+.recent-work{
+    margin-inline: auto;
+    padding: 100px;
+}
+/* Styling Recent Work Header */
+.recent-work h2{
+    margin-inline: auto;
+    text-align: center;
+}
+
+/* Displaying Recent Work Section As Flex */
+.recent-work-container{
+    display: flex;
+    flex-direction: column;
+
+    padding: 100px;
+    padding-bottom: 0px;
+}
+
+.recent-work-container section{
+    flex: 1;
+}
+.recent-work-container :is(.row-1, .row-2, .row-3){
+    display: flex;
+}
+
+/* Adding Padding on each rows */
+.recent-work :is(.row-1, .row-2, .row-3){
+    padding: 50px;
+}
+
+/* Styling the Rows */
+.recent-work .row h3{
+    width: fit-content;
+
+    margin-inline: auto;
+
+    color: #09253d;
+    font-size: 2.2rem;
+    text-align: center;
+
+    transition: transform;
+    transition-duration: .1s;
+    transition-timing-function: ease;
+}
+
+.recent-work .row h3:hover{
+    box-shadow: 0 -5px 0px #7DF9FF inset;
+    transform: scale(1.01);
+}
+.recent-work img{
+    width: 600px;
+    height: 300px;
+
+    transition: opacity, transform;
+    transition-duration: .1s;
+    transition-timing-function: ease;
+}
+
+.recent-work img:hover{
+    opacity: 0.8;
+    transform: scale(1.01);
+}
+.recent-work p{
+    color: #333;
+    padding: 50px;
+    text-align: center;
+}
+
+.recent-work-container .row .col{
+    width: 50%;
+    padding-block: 50px;
+}
+
+.recent-work-container .row-2 img{
+    width: 50%;
+}
+
+/* Styling Why Choose Us Section */
+.why-choose-us{
+    height: 70vh;
+
+    margin-block-start: 15vh;
+    margin-block-end: 10vh;
+    margin-inline: auto;
+}
+/* Styling Why Choose Us Header */
+.why-choose-us h2{
+
+    margin-block-end: 80px;
+    margin-inline: auto;
+
+}
+
+/* Flex */
+.why-us-container{
+    display: flex;
+}
+.why-us-container .item{
+    flex: 1;
+
+    margin-inline-start: 100px;
+    border: 2px solid #09253d;
+    border-radius: 10px;
+    padding: 16px;
+
+    transition: transform;
+    transition-duration: .1s;
+    transition-timing-function: ease-out;
+    
+}
+.why-us-container section + section + section{
+    margin-inline-end: 100px;
+}
+
+.why-us-container .item:hover{
+    border: 2px solid #7DF9FF;
+    transform: scale(1.01);
+}
+
+.why-choose-us :is(h3, p){
+    text-align: center;
+}
+
+.why-choose-us h3{
+    width: fit-content;
+    
+    margin-inline: auto;
+    margin-block-start: 2rem;
+    margin-block-end: 1.6rem;
+
+    color: #09253d;
+    font-size: 2.2rem;
+    text-align: center;
+
+    transition: transform;
+    transition-duration: .1s;
+    transition-timing-function: ease-out;
+}
+
+.why-choose-us h3:hover{
+    box-shadow: 0 -5px 0px #7DF9FF inset;
+    transform: scale(1.01);
+}
+
+.why-choose-us p{
+    width: 70%;
+
+    margin-inline: auto;
+    margin-block: 20px;
+
+    color: #333;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Styling Work Experience Section */
+.work-experience{
+    height: 30vh;
+}
+.work-experience-container{
+    background-color: #09253d;
+    width: 100%;
+    display: flex;
+
+    margin-inline: auto;
+
+    color: azure;
+}
+
+.work-experience-container .item{
+    flex: 1;
+
+    padding-block-start: 40px;
+    padding-block-end: 30px;
+    border-inline: 1px solid #ccd0d3;
+
+    text-align: center;
+}
+
+.work-experience h3{
+    font-size: 2rem;
+}
+.work-experience span{
+    display: block;
+
+    margin-block-start: 25px;
+
+    font-size: 2rem;
+}
+
+
+/* Styling Testimonials Section */
+.testimonials{
+    height: 100vh;
+
+    position: relative;
+}
+/* Styling the Header */
+
+.testimonials .top-header{
+    margin-top: 20px;
+    position: absolute;
+    top: 7%;
+    left: 20%;
+}
+
+.testimonials .lower-header{
+    margin-top: 0;
+    position: absolute;
+    top: 16%;
+    right: 20%;
+}
+
+/* Styling and Positioning Testimonials */
+.testimonials-container{
+    display: flex;
+    gap: 200px;
+
+    position: absolute;
+    top: 33%;
+    left: 12%;
+    right: 12%;
+}
+
+.testimonials section{
+    flex: 1;
+}
+
+.testimonials .testimony-1{
+    background-image: url(img/somedude.jpg);
+}
+.testimonials .testimony-2{
+    background-image: url(img/elon.jpg);
+}
+.testimonials .testimony-3{
+    background-image: url(img/barak.jpg);
+}
+
+.testimonials :is(.testimony-1, .testimony-2, .testimony-3){
+    background-size: cover; 
+
+}
+
+.testimonials section > p{
+    margin-block-end: 10px;
+    padding: 200px 10px 0 10px;
+    color: #7DF9FF;
+    opacity: 0;
+    transition: opacity, transform;
+    transition-duration: .1s;
+    transition-timing-function: ease;
+}
+.testimonials section > p:hover{
+    opacity: 1;
+    transform: scale(1.01);
+}
+
+/* Styling Converting Section */
+/* .converting h2{
+    margin-block-end: 45px;
+    margin-inline: auto;
+} */
+
+.converting h2{
+    font-size: 3rem;
+    text-align: center;
+
+    margin-inline: auto;
+
+}
+.converting .upper-header{
+    font-size: 3.6rem;
+    margin-block-end: 25px;
+}
+
+/* Styling Our Converting Form */
+.converting-form{
+    text-align: center;
+}
+
+
+.converting-form :is(input[type="text"], input[type="submit"]){
+    width: 30%;
+    padding: 10px 5px;
+    margin: 0;
+    margin-block-start: 100px;
+    margin-block-end: 300px;
+}
+.converting-form input[type="text"]{
+    color: #09253d;
+    border: 2px solid #09253d;
+}
+.converting-form input::placeholder{
+    color: #09253d;
+}
+.converting-form input[type="submit"]{
+    color: azure;
+    background-color: #09253d;
+    width: 10%;
+}
+
+/* Styling Our Footer */
+footer{
+    height: 20vh;
+    background-color: #09253d;
+
+    margin-inline: auto;
+
+    text-align: center;
+    color: #ccd0d3;
+}
+
+footer .social-media nav{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+}
+
+footer nav a > img{
+    margin-block: 28px;
+    flex: 1;
+    width: 45px;
+    height: 45px;
+}
+
+.footer-logo{
+    color: azure;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    box-shadow: 0 -3px 0px #7DF9FF inset;
+
+    transition: transform;
+    transition-duration: .1s;
+    transition-timing-function: ease;
+
+}
+.footer-logo:hover{
+    color: #09253d;
+    background-color: #7DF9FF;
+}
+
+
+/* I have to read about that box stuff and try again on the api stuff */
