@@ -509,19 +509,18 @@ h2{
 
 /* Styling Work Experience Section */
 .work-experience{
-    height: 30vh;
-}
-.work-experience-container{
-    background-color: #09253d;
     width: 100%;
+
+    background-color: #09253d;
     display: flex;
 
     margin-inline: auto;
+    margin-block-end: 200px;
 
     color: azure;
 }
 
-.work-experience-container .item{
+.work-experience .item{
     flex: 1;
 
     padding-block-start: 40px;
