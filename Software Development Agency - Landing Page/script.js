@@ -1,12 +1,25 @@
-const appear = document.querySelector('.appear'); 
-const cb = function(entries){
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('inview');
-    }else{
-      entry.target.classList.remove('inview');
-    }
-  });
-}
-const io = new IntersectionObserver(cb);
-io.observe(appear);
+const sections = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+  threshold: 0.5
+};
+
+const appearOnScroll = new IntersectionObserver(
+function(entries, appearOnScroll) 
+{
+    entries.forEach(entry => {
+        if(!entry.isIntersecting)
+        {
+            return;
+        }
+        else
+        {
+            entry.target.classList.add("appear");
+        }
+    });
+}, 
+appearOptions);
+
+sections.forEach(section => {
+    appearOnScroll.observe(section);
+});

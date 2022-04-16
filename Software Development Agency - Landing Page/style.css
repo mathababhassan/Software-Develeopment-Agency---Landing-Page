@@ -20,7 +20,6 @@
 *{
     margin: 0;
     padding: 0;
-
 }
 
 html{
@@ -33,7 +32,6 @@ Styling Order:
 -- padding and margins
 -- typography
 -- positioning
-
 -- others: animation, transitions...etc
  */
 
@@ -65,6 +63,7 @@ body{
     top: 88%;
     left: 2%;
     opacity: 0;
+
     animation: entrance-logo;
     animation-duration: 3s;
     animation-fill-mode: forwards;
@@ -93,6 +92,7 @@ body{
 h1{
     text-align: center;
     position: relative;
+
     animation: entrance-heading;
     animation-duration: 3s;
     animation-fill-mode: forwards;
@@ -114,10 +114,9 @@ h1 a{
     color: azure;
     font-family: 'Lobster', cursive;
     font-weight: 700;
-    text-decoration: underline #7DF9FF;
-    text-decoration: none;
+
     position: relative;
-    z-index: 1;
+
     transition: opacity;
     transition-duration: 0.3s;
     box-shadow: 0 -5px 0px #7DF9FF inset;
@@ -127,9 +126,11 @@ h1 a:hover{
     background-color: #7DF9FF;
     color: #09253d;
 }
+
 .video-bg{
-    min-width: 100%;
-    min-height: 100%; 
+    /* min-width: 100%;
+    min-height: 100%;  */
+
     position: absolute;
     z-index: -1;
     top: -100px;
@@ -686,4 +687,16 @@ footer nav a > img{
 .footer-logo:hover{
     color: #09253d;
     background-color: #7DF9FF;
+}
+
+/* Adding transitions to all elements in the page */
+.fade-in{
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+.fade-in.appear{
+  opacity: 1;
 }
